@@ -1,14 +1,25 @@
 using Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
+using System.Reflection;
+using Application;
+using Application.Product.Command.CreateProduct;
+using Application.Product.Query.GetAllProducts;
 using Domain.Interfaces;
 using Infrastructure.Repositories;
+using MediatR;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddMediatR(configuration => configuration.RegisterServicesFromAssembly(typeof(MediatRAssembly).Assembly));
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+
+
 
 
 builder.Services.AddControllers();
