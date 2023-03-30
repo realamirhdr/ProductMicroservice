@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Application.Category.Dto;
-using Domain.Entities;
+﻿using Application.Category.Dto;
 using MediatR;
 
-namespace Application.Category.Query.GetAllCategories
+namespace Application.Category.Query.GetCategoryById
 {
     public class GetCategoryByIdQuery : IRequest<GetCategoryDto>
     {

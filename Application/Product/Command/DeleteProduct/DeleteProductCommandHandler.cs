@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Application.Category.Dto;
-using Application.Product.Dto;
+﻿using Application.Category.Query.GetAllCategories;
 using Domain.Interfaces;
-using Mapster;
 using MediatR;
 
-namespace Application.Category.Query.GetAllCategories
+namespace Application.Product.Command.DeleteProduct
 {
     public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand, bool>
     {

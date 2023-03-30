@@ -1,18 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Application.Category.Command.CreateCategory;
-using Application.Category.Dto;
-using Application.Product.Command.CreateProduct;
-using Application.Product.Dto;
-using Application.Product.Query.GetProductById;
-using Domain.Interfaces;
+﻿using Domain.Interfaces;
 using Mapster;
 using MediatR;
 
-namespace Application.Category.Query.GetAllCategories
+namespace Application.Product.Command.CreateProduct
 {
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, bool>
     {
