@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Application.Category.Dto;
+﻿using Application.Category.Dto;
 using Domain.Interfaces;
 using Mapster;
 using MediatR;
 
-namespace Application.Category.Query.GetAllCategories
+namespace Application.Category.Query.GetCategoryById
 {
     public class GetCategoryByIdQueryHandler : IRequestHandler<GetCategoryByIdQuery, GetCategoryDto>
     {
